@@ -1,0 +1,1160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kutumb Collections | Fashion & Accessories</title>
+
+<style>
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf7;
+    color: #392d32;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+/* ANNOUNCEMENT */
+
+.announcement {
+    background: #392d32;
+    color: white;
+    text-align: center;
+    padding: 11px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: #392d32;
+}
+
+.logo span {
+    color: #c77d8d;
+}
+
+nav a {
+    text-decoration: none;
+    color: #392d32;
+    margin: 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #c77d8d;
+}
+
+.cart-btn {
+    padding: 11px 18px;
+    background: #c77d8d;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+    width: 90%;
+    margin: 30px auto;
+    min-height: 410px;
+    background: linear-gradient(110deg, #f5dada, #fff0ed);
+    display: flex;
+    align-items: center;
+    padding: 55px;
+    border-radius: 8px;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.hero small {
+    color: #a95e70;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 54px;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.hero p {
+    color: #786c70;
+    line-height: 1.8;
+}
+
+.shop-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 28px;
+    background: #a95e70;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.shop-btn:hover {
+    background: #392d32;
+}
+
+/* COLLECTION SECTION */
+
+.section {
+    width: 90%;
+    margin: 65px auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading small {
+    color: #a95e70;
+    letter-spacing: 2px;
+}
+
+.heading h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin: 12px;
+}
+
+.heading p {
+    color: #888;
+}
+
+/* CATEGORY FILTER */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+.filters button {
+    padding: 11px 20px;
+    background: white;
+    border: 1px solid #e9dada;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.filters button.active {
+    background: #a95e70;
+    color: white;
+}
+
+/* SEARCH */
+
+.search {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    padding: 14px;
+    border: 1px solid #ddd;
+    margin: 20px auto 30px;
+    outline: none;
+    border-radius: 4px;
+}
+
+.search:focus {
+    border-color: #c77d8d;
+}
+
+/* PRODUCT GRID */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #eee;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #0001;
+}
+
+.product img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: #f8f3f0;
+}
+
+.product h3 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.category {
+    color: #b36b7d;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 12px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+.add {
+    width: 100%;
+    padding: 13px;
+    background: #392d32;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add:hover {
+    background: #a95e70;
+}
+
+/* BENEFITS */
+
+.benefits {
+    background: #f8e9e9;
+    padding: 45px 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 20px;
+}
+
+.benefits h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.benefits p {
+    color: #786c70;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    padding: 55px 20px;
+    text-align: center;
+    background: #fffaf7;
+}
+
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin: 12px;
+    color: #786c70;
+}
+
+.contact a {
+    color: #a95e70;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: #392d32;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer .logo {
+    color: white;
+    font-size: 29px;
+}
+
+footer p {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #ddd;
+}
+
+/* CART PANEL */
+
+.cart-panel {
+    position: fixed;
+    right: -420px;
+    top: 0;
+    width: min(400px, 95%);
+    height: 100%;
+    background: white;
+    z-index: 30;
+    padding: 22px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-head h2 {
+    font-family: Georgia, serif;
+}
+
+.close {
+    border: none;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.cart-item h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.qty {
+    margin-top: 8px;
+}
+
+.qty button {
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+.remove {
+    color: #a95e70;
+    border: none;
+    background: none;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cart-footer {
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.checkout {
+    width: 100%;
+    padding: 14px;
+    background: #a95e70;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.checkout:hover {
+    background: #392d32;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: #0007;
+    z-index: 20;
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 750px) {
+
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+        line-height: 2.5;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 30px;
+        min-height: 330px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product img {
+        height: 190px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 420px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product img {
+        height: 260px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ANNOUNCEMENT -->
+
+<div class="announcement">
+    ✨ WELCOME TO KUTUMB COLLECTIONS | EXPLORE OUR LATEST COLLECTION ✨
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        KUTUMB <span>COLLECTIONS</span>
+    </div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#shop">SHOP</a>
+        <a href="#shop" onclick="filterProducts('Hair Accessories')">
+            HAIR ACCESSORIES
+        </a>
+        <a href="#shop" onclick="filterProducts('Handbags')">
+            HANDBAGS
+        </a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <button class="cart-btn" onclick="toggleCart(true)">
+        🛍 CART (<span id="cartCount">0</span>)
+    </button>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <small>YOUR STYLE, OUR COLLECTION</small>
+
+        <h1>
+            Beauty in Every Little Thing.
+        </h1>
+
+        <p>
+            Discover beautiful hair accessories, elegant handbags
+            and fashionable essentials.
+
+            Explore our latest collection and find something
+            special for every occasion.
+        </p>
+
+        <a href="#shop" class="shop-btn">
+            SHOP COLLECTION
+        </a>
+
+    </div>
+
+</section>
+
+<!-- SHOP SECTION -->
+
+<section class="section" id="shop">
+
+    <div class="heading">
+
+        <small>CURATED FOR YOU</small>
+
+        <h2>Our Collection</h2>
+
+        <p>
+            Find your favourite fashion accessories.
+        </p>
+
+    </div>
+
+    <!-- FILTER BUTTONS -->
+
+    <div class="filters">
+
+        <button class="active"
+        onclick="filterProducts('All')">
+            All Products
+        </button>
+
+        <button
+        onclick="filterProducts('Hair Accessories')">
+            Hair Accessories
+        </button>
+
+        <button
+        onclick="filterProducts('Handbags')">
+            Handbags
+        </button>
+
+    </div>
+
+    <!-- SEARCH BAR -->
+
+    <input
+        class="search"
+        id="search"
+        type="search"
+        placeholder="Search your favourite products..."
+        oninput="renderProducts()"
+    >
+
+    <!-- PRODUCTS -->
+
+    <div class="products" id="products"></div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+    <div>
+
+        <h3>♡ Beautiful Products</h3>
+
+        <p>
+            Fashionable accessories for every occasion.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h3>✧ Easy Shopping</h3>
+
+        <p>
+            Discover and shop your favourite products.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h3>♧ Perfect Gifts</h3>
+
+        <p>
+            Lovely products for you and your loved ones.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p><strong>Kutumb Collections</strong></p>
+
+    <p>Business Owner: Renuka Mittal</p>
+
+    <p>
+        Phone:
+        <a href="tel:9911511066">
+            9911511066
+        </a>
+    </p>
+
+    <p>
+        Payment through Paytm:
+        <strong>9136001860</strong>
+    </p>
+
+    <p>
+        For product enquiries and orders, contact us directly.
+    </p>
+
+    <a href="https://wa.me/919911511066"
+       target="_blank"
+       rel="noopener">
+        Contact on WhatsApp
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="logo">
+        KUTUMB <span>COLLECTIONS</span>
+    </div>
+
+    <p>
+        Fashion • Accessories • Style
+    </p>
+
+    <p>
+        Owner: Renuka Mittal
+    </p>
+
+    <p>
+        Contact: 9911511066
+    </p>
+
+    <p>
+        © <span id="year"></span>
+        Kutumb Collections. All Rights Reserved.
+    </p>
+
+</footer>
+
+<!-- CART OVERLAY -->
+
+<div
+    class="overlay"
+    id="overlay"
+    onclick="toggleCart(false)">
+</div>
+
+<!-- CART PANEL -->
+
+<aside class="cart-panel" id="cartPanel">
+
+    <div class="cart-head">
+
+        <h2>Your Shopping Bag</h2>
+
+        <button
+            class="close"
+            onclick="toggleCart(false)">
+            ×
+        </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+
+        <div class="total">
+
+            <span>Total</span>
+
+            <span id="cartTotal">₹0</span>
+
+        </div>
+
+        <button
+            class="checkout"
+            onclick="checkout()">
+            PROCEED TO CHECKOUT
+        </button>
+
+    </div>
+
+</aside>
+
+<script>
+
+// ====================================
+// PRODUCT DATABASE
+// ====================================
+
+const products = [
+
+    {
+        id: 1,
+        name: "Butterfly Hair Claw Clips Set",
+        category: "Hair Accessories",
+        price: 149,
+        image: "IMG-20261103-WA0005.jpg"
+    },
+
+    {
+        id: 2,
+        name: "Elegant Evening Clutch",
+        category: "Handbags",
+        price: 499,
+        image: "IMG-20261103-WA0006.jpg"
+    },
+
+    {
+        id: 3,
+        name: "Chain Strap Party Clutch",
+        category: "Handbags",
+        price: 549,
+        image: "IMG-20261103-WA0007.jpg"
+    },
+
+    {
+        id: 4,
+        name: "Flower Hair Claw Clips",
+        category: "Hair Accessories",
+        price: 129,
+        image: "IMG-20261103-WA0008.jpg"
+    },
+
+    {
+        id: 5,
+        name: "Butterfly Clips Collection",
+        category: "Hair Accessories",
+        price: 99,
+        image: "IMG-20261103-WA0009.jpg"
+    },
+
+    {
+        id: 6,
+        name: "Pastel Flower Clips Set",
+        category: "Hair Accessories",
+        price: 149,
+        image: "IMG-20261103-WA0010.jpg"
+    }
+
+];
+
+// ====================================
+// SHOPPING CART
+// ====================================
+
+let cart = [];
+
+let activeCategory = "All";
+
+// ====================================
+// PRICE FORMAT
+// ====================================
+
+function money(amount) {
+
+    return "₹" + amount.toLocaleString("en-IN");
+
+}
+
+// ====================================
+// DISPLAY PRODUCTS
+// ====================================
+
+function renderProducts() {
+
+    const search = document
+        .getElementById("search")
+        .value.toLowerCase();
+
+    const filtered = products.filter(product => {
+
+        const categoryMatch =
+            activeCategory === "All" ||
+            product.category === activeCategory;
+
+        const searchMatch =
+            product.name.toLowerCase().includes(search);
+
+        return categoryMatch && searchMatch;
+
+    });
+
+    document.getElementById("products").innerHTML =
+
+        filtered.map(product => `
+
+            <div class="product">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    onerror="this.style.display='none'"
+                >
+
+                <div class="category">
+                    ${product.category}
+                </div>
+
+                <h3>${product.name}</h3>
+
+                <div class="price">
+                    ${money(product.price)}
+                </div>
+
+                <button
+                    class="add"
+                    onclick="addToCart(${product.id})">
+
+                    ADD TO CART
+
+                </button>
+
+            </div>
+
+        `).join("") || "<p>No products found.</p>";
+
+}
+
+// ====================================
+// CATEGORY FILTER
+// ====================================
+
+function filterProducts(category) {
+
+    activeCategory = category;
+
+    document.querySelectorAll(".filters button")
+        .forEach(button => {
+
+            const label = category === "All"
+                ? "All Products"
+                : category;
+
+            button.classList.toggle(
+                "active",
+                button.textContent.trim() === label
+            );
+
+        });
+
+    renderProducts();
+
+}
+
+// ====================================
+// ADD TO CART
+// ====================================
+
+function addToCart(id) {
+
+    const item = cart.find(product => product.id === id);
+
+    if (item) {
+
+        item.qty++;
+
+    } else {
+
+        cart.push({
+            id: id,
+            qty: 1
+        });
+
+    }
+
+    updateCart();
+
+    toggleCart(true);
+
+}
+
+// ====================================
+// CHANGE QUANTITY
+// ====================================
+
+function changeQty(id, amount) {
+
+    const item = cart.find(product => product.id === id);
+
+    if (!item) return;
+
+    item.qty += amount;
+
+    if (item.qty <= 0) {
+
+        cart = cart.filter(product => product.id !== id);
+
+    }
+
+    updateCart();
+
+}
+
+// ====================================
+// REMOVE PRODUCT
+// ====================================
+
+function removeProduct(id) {
+
+    cart = cart.filter(product => product.id !== id);
+
+    updateCart();
+
+}
+
+// ====================================
+// UPDATE CART
+// ====================================
+
+function updateCart() {
+
+    const count = cart.reduce(
+        (sum, item) => sum + item.qty,
+        0
+    );
+
+    document.getElementById("cartCount").textContent = count;
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+        const product = products.find(
+            p => p.id === item.id
+        );
+
+        total += product.price * item.qty;
+
+    });
+
+    document.getElementById("cartTotal").textContent =
+        money(total);
+
+    document.getElementById("cartItems").innerHTML =
+
+        cart.length ? cart.map(item => {
+
+            const product = products.find(
+                p => p.id === item.id
+            );
+
+            return `
+
+                <div class="cart-item">
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                    >
+
+                    <div>
+
+                        <h4>${product.name}</h4>
+
+                        <p>${money(product.price)}</p>
+
+                        <div class="qty">
+
+                            <button
+                                onclick="changeQty(${product.id},-1)">
+                                −
+                            </button>
+
+                            ${item.qty}
+
+                            <button
+                                onclick="changeQty(${product.id},1)">
+                                +
+                            </button>
+
+                            <button
+                                class="remove"
+                                onclick="removeProduct(${product.id})">
+                                Remove
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }).join("") :
+
+        "<p style='padding:30px 0;text-align:center'>Your cart is empty.</p>";
+
+}
+
+// ====================================
+// OPEN / CLOSE CART
+// ====================================
+
+function toggleCart(open) {
+
+    document.getElementById("cartPanel")
+        .classList.toggle("open", open);
+
+    document.getElementById("overlay")
+        .classList.toggle("open", open);
+
+}
+
+// ====================================
+// CHECKOUT
+// ====================================
+
+function checkout() {
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty!");
+
+        return;
+
+    }
+
+    let total = 0;
+
+    let orderDetails = "";
+
+    cart.forEach(item => {
+
+        const product = products.find(
+            p => p.id === item.id
+        );
+
+        const amount = product.price * item.qty;
+
+        total += amount;
+
+        orderDetails +=
+            product.name +
+            " x " + item.qty +
+            " = " + money(amount) + "\n";
+
+    });
+
+    const message =
+        "Hello Kutumb Collections!\n\n" +
+        "I want to place an order:\n\n" +
+        orderDetails +
+        "\nTotal: " + money(total) +
+        "\n\nPlease confirm availability and delivery details.";
+
+    const whatsappURL =
+        "https://wa.me/919911511066?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+
+}
+
+// ====================================
+// INITIALIZE WEBSITE
+// ====================================
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+renderProducts();
+
+updateCart();
+
+</script>
+
+</body>
+</html>
